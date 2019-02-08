@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+body.cke_editable p,
+body.cke_editable li,
+body.cke_editable span {
+  font-size: initial !important;
+}
+
+#header .row > *:not([class*="col"]),
+#main .row > *:not([class*="col"]),
+#footer .row > *:not([class*="col"]) {
+  max-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#intergage-logo {
+  width: 100%;
+  position: relative;
+  height: 2.5rem;
+  overflow: hidden;
+}
+
+#intergage-logo span {
+  position: absolute;
+  right: -100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 2.5rem;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  padding-right: 3em;
+}
+
+#intergage-logo a {
+  width: 2rem;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #intergage-logo a {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+#intergage-logo a img {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #intergage-logo:hover a img {
+    transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+body,
+body:not(.cke_editable) {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+body #header,
+body:not(.cke_editable) #header {
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 3rem;
+  background: #f4f4f4;
+}
+
+body #header #burger,
+body #header #close,
+body:not(.cke_editable) #header #burger,
+body:not(.cke_editable) #header #close {
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+body #header #burger,
+body:not(.cke_editable) #header #burger {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #header #burger > div,
+body:not(.cke_editable) #header #burger > div {
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #222;
+  margin: 2.5px auto;
+}
+
+body #header #burger:hover,
+body:not(.cke_editable) #header #burger:hover {
+  background: rgba(34, 34, 34, 0.2);
+}
+
+body #header #close,
+body:not(.cke_editable) #header #close {
+  display: none;
+}
+
+body #header #close > div,
+body:not(.cke_editable) #header #close > div {
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #222;
+}
+
+body #header #close > div:first-child,
+body:not(.cke_editable) #header #close > div:first-child {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+body #header #close > div:last-child,
+body:not(.cke_editable) #header #close > div:last-child {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+body #header #site-logo img,
+body:not(.cke_editable) #header #site-logo img {
+  height: 3rem;
+  width: auto;
+}
+
+body #header + *:before,
+body:not(.cke_editable) #header + *:before {
+  display: block;
+  width: 100%;
+  content: "";
+  height: 3rem;
+}
+
+@media screen and (max-width: calc(991px)) {
+  body,
+  body:not(.cke_editable) {
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+  }
+  body #header,
+  body:not(.cke_editable) #header {
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+  }
+  body #header #main-menu,
+  body:not(.cke_editable) #header #main-menu {
+    position: fixed;
+    top: 0;
+    background: #222;
+    height: 100vh;
+    -webkit-transition: right 0.5s ease;
+    transition: right 0.5s ease;
+    width: 70vw;
+    right: -70vw;
+  }
+  body #header #main-menu ul,
+  body:not(.cke_editable) #header #main-menu ul {
+    list-style: none;
+    margin: 0;
+  }
+  body #header #main-menu ul li,
+  body:not(.cke_editable) #header #main-menu ul li {
+    margin: 0;
+    display: block;
+    text-align: right;
+  }
+  body #header #main-menu ul li a,
+  body #header #main-menu ul li span,
+  body:not(.cke_editable) #header #main-menu ul li a,
+  body:not(.cke_editable) #header #main-menu ul li span {
+    display: block;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #fff;
+  }
+  body #header #main-menu > ul,
+  body:not(.cke_editable) #header #main-menu > ul {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: calc(991px)) and (min-width: 768px) {
+  body #header #main-menu,
+  body:not(.cke_editable) #header #main-menu {
+    width: 50vw;
+    right: -50vw;
+  }
+}
+
+body.opened,
+body:not(.cke_editable).opened {
+  right: 70vw;
+}
+
+body.opened #header,
+body:not(.cke_editable).opened #header {
+  right: 70vw;
+}
+
+body.opened #header #main-menu,
+body:not(.cke_editable).opened #header #main-menu {
+  right: 0;
+}
+
+body.opened #header #burger,
+body:not(.cke_editable).opened #header #burger {
+  display: none;
+}
+
+body.opened #header #close,
+body:not(.cke_editable).opened #header #close {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  body.opened,
+  body:not(.cke_editable).opened {
+    right: 50vw;
+  }
+  body.opened #header,
+  body:not(.cke_editable).opened #header {
+    right: 50vw;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body #header,
+  body:not(.cke_editable) #header {
+    height: 5rem;
+  }
+  body #header #site-logo img,
+  body:not(.cke_editable) #header #site-logo img {
+    height: 5rem;
+  }
+  body #header #burger,
+  body:not(.cke_editable) #header #burger {
+    display: none;
+  }
+  body #header #close,
+  body:not(.cke_editable) #header #close {
+    display: none;
+  }
+  body #header #main-menu > ul,
+  body:not(.cke_editable) #header #main-menu > ul {
+    list-style: none;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  body #header #main-menu > ul > li,
+  body:not(.cke_editable) #header #main-menu > ul > li {
+    list-style: none;
+    position: relative;
+  }
+  body #header #main-menu > ul > li a,
+  body #header #main-menu > ul > li span,
+  body:not(.cke_editable) #header #main-menu > ul > li a,
+  body:not(.cke_editable) #header #main-menu > ul > li span {
+    padding: 0 1rem;
+    display: block;
+  }
+  body #header #main-menu > ul > li a:hover,
+  body #header #main-menu > ul > li span:hover,
+  body:not(.cke_editable) #header #main-menu > ul > li a:hover,
+  body:not(.cke_editable) #header #main-menu > ul > li span:hover {
+    text-decoration: none;
+  }
+  body #header #main-menu > ul > li > a,
+  body #header #main-menu > ul > li > span,
+  body:not(.cke_editable) #header #main-menu > ul > li > a,
+  body:not(.cke_editable) #header #main-menu > ul > li > span {
+    line-height: 5rem;
+  }
+  body #header #main-menu > ul > li > ul,
+  body:not(.cke_editable) #header #main-menu > ul > li > ul {
+    display: none;
+  }
+  body #header #main-menu > ul > li:hover > ul,
+  body:not(.cke_editable) #header #main-menu > ul > li:hover > ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background: #f4f4f4;
+    min-width: 10rem;
+  }
+  body #header #main-menu > ul > li:hover > ul > li,
+  body:not(.cke_editable) #header #main-menu > ul > li:hover > ul > li {
+    list-style: none;
+  }
+  body #header #main-menu > ul > li:hover > ul > li > a,
+  body #header #main-menu > ul > li:hover > ul > li > span,
+  body:not(.cke_editable) #header #main-menu > ul > li:hover > ul > li > a,
+  body:not(.cke_editable) #header #main-menu > ul > li:hover > ul > li > span {
+    line-height: 2.5rem;
+  }
+  body #header + *:before,
+  body:not(.cke_editable) #header + *:before {
+    height: 5rem;
+  }
+}
+
+body #footer ul,
+body:not(.cke_editable) #footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body #footer #footer-upper,
+body:not(.cke_editable) #footer #footer-upper {
+  background: #333;
+  color: #fff;
+}
+
+body #footer #copyright,
+body:not(.cke_editable) #footer #copyright {
+  background: #222;
+  color: #fff;
+}
+
+body #footer #copyright p,
+body:not(.cke_editable) #footer #copyright p {
+  margin: 0;
+  line-height: 3rem;
+}
+
+.article.detail footer .btn {
+  margin-right: 1rem;
+}
+
+.banner-image {
+  height: 50vh;
+  position: relative;
+}
+
+.banner-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover; object-position: bottom;";
+}
+
+.banner-image p {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.c2form_zero fieldset {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.c2form_zero select,
+.c2form_zero textarea,
+.c2form_zero input[type="tel"],
+.c2form_zero input[type="email"],
+.c2form_zero input[type="text"] {
+  width: 100% !important;
+  font-size: 1rem;
+  background: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+}
+
+.c2form_zero label,
+.c2form_zero .c2form_reqfields {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 0.5rem;
+}
+
+.bffsfield {
+  display: none;
+}
+
+.FormFieldErrorText {
+  margin: 0 0 1rem 0;
+}
+
+.MsgPriority {
+  display: none;
+}
+
+.FormFieldErrorText {
+  color: red;
+}
+
+.c2form_buttons {
+  text-align: left;
+}
+
+.product.detail footer .btn {
+  margin-right: 1rem;
+}
+
+.product-gallery__main-image > div {
+  width: 100%;
+  position: relative;
+}
+
+.product-gallery__main-image > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover; object-position: bottom;";
+}
+
+.product-gallery__main-image > div:after {
+  padding-top: 100%;
+  display: block;
+  content: "";
+}
+
+.product-gallery__thumbnail {
+  opacity: 0.5;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.product-gallery__thumbnail > div {
+  width: 100%;
+  position: relative;
+}
+
+.product-gallery__thumbnail > div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  font-family: "object-fit: cover; object-position: bottom;";
+}
+
+.product-gallery__thumbnail > div:after {
+  padding-top: 100%;
+  display: block;
+  content: "";
+}
+
+.product-gallery__thumbnail:hover, .product-gallery__thumbnail.active {
+  opacity: 1;
+}
+/*# sourceMappingURL=site-styles.css.map */

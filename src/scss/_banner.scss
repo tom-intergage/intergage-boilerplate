@@ -1,0 +1,9 @@
+.banner-image {
+    height: map-get($banners, homepage-height);
+      @include objectfit();
+      p {
+          margin:0;
+          height:100%;
+          width:100%;
+      }
+  }

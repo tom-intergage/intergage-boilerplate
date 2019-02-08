@@ -1,0 +1,15 @@
+.article {
+    &.detail {
+      header {
+      }
+      main {
+      }
+      footer {
+        .btn {
+          margin-right: 1rem;
+        }
+      }
+    }
+    &.summary {
+    }
+  }

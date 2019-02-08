@@ -1,0 +1,78 @@
+//RICH TEXT EDITOR FIXES
+body.cke_editable {
+  p,
+  li,
+  span {
+    font-size: initial !important;
+  }
+}
+
+//MAKE NON COLUMNS BECOME FULL WIDTH COLUMNS
+#header,
+#main,
+#footer {
+  .row {
+    > *:not([class*="col"]) {
+      max-width: 100%;
+      flex: 0 0 100%;
+      position: relative;
+      width: 100%;
+      min-height: 1px;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+//ENSURE IMAGES CANNOT OVERFLOW THEIR CONTAINER
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#intergage-logo {
+  width: 100%;
+  position: relative;
+  height: 2.5rem;
+  overflow: hidden;
+  span {
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 2.5rem;
+    transition: all 0.8s ease;
+    padding-right: 3em;
+  }
+  a {
+    width: 2rem;
+    height: 2rem;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    margin: 0;
+    padding: 0;
+    img {
+      -webkit-transition: -webkit-transform 0.8s ease-in-out;
+      -ms-transition: -ms-transform 0.8s ease-in-out;
+      transition: transform 0.8s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    @media screen and (min-width: 768px) {
+      a {
+        img {
+          transform: rotate(-360deg);
+          -ms-transform: rotate(-360deg);
+          -webkit-transform: rotate(-360deg);
+        }
+      }
+    }
+  }
+}

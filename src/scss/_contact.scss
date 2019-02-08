@@ -1,0 +1,46 @@
+.c2form_zero {
+    fieldset {
+      width: 100%;
+      max-width: 100% !important;
+    }
+    select,
+    textarea,
+    input[type="tel"],
+    input[type="email"],
+    input[type="text"] {
+      width: 100% !important;
+      font-size: 1rem;
+      background: #fff;
+      box-sizing: border-box;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+    }
+    label,
+    .c2form_reqfields {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  .bffsfield {
+    display: none;
+  }
+  
+  .FormFieldErrorText {
+    margin: 0 0 1rem 0;
+  }
+  
+  .MsgPriority {
+    display: none;
+  }
+  
+  .FormFieldErrorText {
+    color: map-get($theme,error);
+  }
+  
+  .c2form_buttons {
+    text-align: left;
+  }

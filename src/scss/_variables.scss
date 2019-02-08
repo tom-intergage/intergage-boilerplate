@@ -1,0 +1,34 @@
+//COLOUR SCHEME
+
+$theme: (
+  white: #fff,
+  black: #222,
+  primary: #000,
+  secondary: #333,
+  interactive: #222,
+  disabled: #ccc,
+  error: red,
+  positive: green,
+  light-grey: #f4f4f4
+);
+$breakpoints: (
+  sm: 576px,
+  sm-max: calc(575px),
+  md: 768px,
+  md-max: calc(767px),
+  lg: 992px,
+  lg-max: calc(991px),
+  xl: 1200px,
+  xl-max: calc(1199px)
+);
+$header: (
+  height: 5rem,
+  mobile-height: 3rem,
+  mobile-menu-width: 70vw,
+  tablet-menu-width: 50vw
+);
+
+$banners: (
+  homepage-height: 50vh,
+  height: 50vh
+);

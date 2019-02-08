@@ -1,0 +1,207 @@
+body,
+body:not(.cke_editable) {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  #header {
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    height: map-get($header, mobile-height);
+    background: map-get($theme, light-grey);
+    #burger,
+    #close {
+      width: map-get($header, mobile-height);
+      height: map-get($header, mobile-height);
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+    #burger {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > div {
+        display: block;
+        width: 50%;
+        height: 3px;
+        background: map-get($theme, black);
+        margin: 2.5px auto;
+      }
+      &:hover {
+        background: rgba(map-get($theme, black), 0.2);
+      }
+    }
+    #close {
+      display: none;
+      > div {
+        width: 50%;
+        height: 3px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: map-get($theme, black);
+        &:first-child {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &:last-child {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
+    }
+    #site-logo {
+      img {
+        height: map-get($header, mobile-height);
+        width: auto;
+      }
+    }
+    & + * {
+      &:before {
+        display: block;
+        width: 100%;
+        content: "";
+        height: map-get($header, mobile-height);
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints,lg-max)) {
+    transition: right 0.5s ease;
+    #header {
+      transition: right 0.5s ease;
+      #main-menu {
+        position: fixed;
+        top: 0;
+        background: map-get($theme, black);
+        height: 100vh;
+        transition: right 0.5s ease;
+        width: map-get($header, mobile-menu-width);
+        right: -(map-get($header, mobile-menu-width));
+        ul {
+          list-style: none;
+          margin: 0;
+          li {
+            margin: 0;
+            display: block;
+            text-align: right;
+            a,
+            span {
+              display: block;
+              padding: 0 1rem;
+              font-size: 1.5rem;
+              line-height: 2rem;
+              color: map-get($theme, white);
+            }
+          }
+        }
+        > ul {
+          padding: 1rem;
+        }
+      }
+    }
+    @media screen and (min-width: map-get($breakpoints,md)) {
+      #header {
+        #main-menu {
+          width: map-get($header, tablet-menu-width);
+          right: -(map-get($header, tablet-menu-width));
+        }
+      }
+    }
+  }
+  &.opened {
+    right: map-get($header, mobile-menu-width);
+    #header {
+      right: map-get($header, mobile-menu-width);
+      #main-menu {
+        right: 0;
+      }
+      #burger {
+        display: none;
+      }
+      #close {
+        display: block;
+      }
+    }
+    @media screen and (min-width: map-get($breakpoints,md)) {
+      right: map-get($header, tablet-menu-width);
+      #header {
+        right: map-get($header, tablet-menu-width);
+      }
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints,lg)) {
+    #header {
+      height: map-get($header, height);
+      #site-logo {
+        img {
+          height: map-get($header, height);
+        }
+      }
+      #burger {
+        display: none;
+      }
+      #close {
+        display: none;
+      }
+      #main-menu {
+        > ul {
+          list-style: none;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          > li {
+            list-style: none;
+            position: relative;
+            a,
+            span {
+              padding: 0 1rem;
+              display: block;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            > a,
+            > span {
+              line-height: map-get($header, height);
+            }
+            > ul {
+              display: none;
+            }
+            &:hover {
+              > ul {
+                display: block;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                background: map-get($theme, light-grey);
+                min-width: 10rem;
+                > li {
+                  list-style: none;
+                  > a,
+                  > span {
+                    line-height: 2.5rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      & + * {
+        &:before {
+          height: map-get($header, height);
+        }
+      }
+    }
+  }
+}

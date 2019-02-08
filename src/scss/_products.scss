@@ -1,0 +1,51 @@
+.product {
+  &.detail {
+    header {
+    }
+    main {
+    }
+    footer {
+      .btn {
+        margin-right: 1rem;
+      }
+    }
+  }
+  &.summary {
+  }
+}
+
+.product-gallery {
+}
+
+.product-gallery__main-image {
+  > div {
+    width: 100%;
+    @include objectfit();
+    &:after {
+      padding-top: 100%;
+      display: block;
+      content: "";
+    }
+  }
+}
+.product-gallery__thumbnails {
+}
+
+.product-gallery__thumbnail {
+  opacity: 0.5;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  > div {
+    width: 100%;
+    @include objectfit();
+    &:after {
+      padding-top: 100%;
+      display: block;
+      content: "";
+    }
+  }
+  &:hover,
+  &.active {
+    opacity: 1;
+  }
+}
