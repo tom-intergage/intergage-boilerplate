@@ -13,13 +13,13 @@ $theme: (
 );
 $breakpoints: (
   sm: 576px,
-  sm-max: calc(575px),
+  sm-max: 575px,
   md: 768px,
-  md-max: calc(767px),
+  md-max: 767px,
   lg: 1024px,
-  lg-max: calc(1025px),
+  lg-max: 1025px,
   xl: 1200px,
-  xl-max: calc(1199px)
+  xl-max: 1199px
 );
 $header: (
   height: 5rem,
