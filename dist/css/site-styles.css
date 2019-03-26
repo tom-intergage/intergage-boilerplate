@@ -182,7 +182,7 @@ body:not(.cke_editable) #header + *:before {
   height: 3rem;
 }
 
-@media screen and (max-width: calc(991px)) {
+@media screen and (max-width: calc(1025px)) {
   body,
   body:not(.cke_editable) {
     -webkit-transition: right 0.5s ease;
@@ -231,7 +231,7 @@ body:not(.cke_editable) #header + *:before {
   }
 }
 
-@media screen and (max-width: calc(991px)) and (min-width: 768px) {
+@media screen and (max-width: calc(1025px)) and (min-width: 768px) {
   body #header #main-menu,
   body:not(.cke_editable) #header #main-menu {
     width: 50vw;
@@ -275,7 +275,7 @@ body:not(.cke_editable).opened #header #close {
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1024px) {
   body #header,
   body:not(.cke_editable) #header {
     height: 5rem;
